@@ -185,16 +185,6 @@ func TestRewrite(t *testing.T) {
 				{"C/main.go", whitespaceRewritten, nil},
 			},
 		},
-		{ // sort after rewrite
-			cwd:   "C",
-			paths: []string{"D", "E"},
-			start: []*node{
-				{"C/main.go", sortOrder, nil},
-			},
-			want: []*node{
-				{"C/main.go", sortOrderRewritten, nil},
-			},
-		},
 	}
 
 	const gopath = "godeptest"
